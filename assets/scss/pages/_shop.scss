@@ -1,0 +1,120 @@
+// 色彩設定
+$primary: #aa0601;
+$primary-light: #fbf2f2;
+$primary-dark: #650300;
+// 文字大小設定
+$font-size-base: 1rem; // 16px
+
+$font-size-sm: $font-size-base * 0.875; // 14px
+
+$h1-font-size: $font-size-base * 4; // 64px
+$h2-font-size: $font-size-base * 3; // 48px
+$h3-font-size: $font-size-base * 1.75; // 28px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.25; // 20px
+$h6-font-size: $font-size-base; // 16px
+
+$font-size-xxl:64px;
+$font-size-xl:48px;
+$font-size-l:36px;
+$font-size-m:24px;
+$font-size-s:20px;
+$font-size-xs:16px;
+
+.pt-96{
+    padding-top: 96px;
+    @media (max-width:992px) {
+        padding-top: 80px;
+    }
+    @media (max-width:576px) {
+        padding-top: 40px;
+    }
+}
+.pb-32{
+    padding-bottom: 32px;
+    @media (max-width:576px) {
+        padding-bottom: 24px;
+    }
+}
+.choose{
+    font-size: $font-size-m;
+    padding-right: 16px;
+    @media (max-width:576px) {
+        font-size: $font-size-xs;
+        padding-right: 8px;
+    }
+}
+.pb-40{
+    padding-bottom: 40px;
+    @media (max-width:576px) {
+        padding-bottom: 24px;
+    }
+}
+select{
+    border: 1px solid #CED4DA;
+    width: 304px;
+    @media (max-width:576px) {
+        width: 276px;
+    }
+}
+.shop{
+    width: calc(100%/3);
+    @media (max-width:992px) {
+        width: calc(100%/2);
+    }
+    @media (max-width:576px) {
+        width: 100%;
+    }
+}
+.pic_shop{
+    width: 100%;
+}
+.frame{
+    border: 1px solid #00000020;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.name{
+    font-size: $font-size-m;
+    padding: 8px 0 8px 24px;
+}
+.information{
+    font-size: $font-size-s;
+    padding: 16px 24px;
+}
+.shop_call{
+    display: flex;
+    flex-direction: row;
+}
+.text_shop{
+    font-size: $font-size-s;
+  }
+.icon_24{
+    font-size: 24px;
+    padding-right: 8px;
+}
+
+// icon 
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.btn{
+    width: 100%;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    font-size: 19px;
+}

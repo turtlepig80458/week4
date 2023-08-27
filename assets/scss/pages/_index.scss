@@ -1,3 +1,604 @@
-.index-title {
-  font-size: 100px;
+/* 基本設置 */
+body {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* 全域 border box  */
+*,::before,::after{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+/* RWD img css 可當作css reset 其中一個 */
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* utilities */
+.bg-primary {
+  background-color: #aa0601;
+}
+
+/* 共用區 */
+.container{
+  /* 桌機 */
+  max-width: 1320px;
+  margin: 0 auto;
+  padding:0 12px;
+
+  /* 平板 */
+  @media(max-width: 992px){
+      max-width: 720px;
+      /* 696+24gutter */
+  }
+
+  /* 手機 */
+  @media (max-width:576px) {
+      max-width: 372px;
+      /* 348+24gutter */
+  }
+}
+
+/* 抵銷掉左右邊界的 col 的左右 padding */
+.row{
+  margin-left: -12px;
+  margin-right: -12px;
+  display: flex;
+}
+
+/* .mx-12{
+  margin: 0 12px;
+} */
+
+.plr-12{
+  padding-left: 12px;
+  padding-right: 12px;
+  @media (max-width:576px) {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+}
+
+/* .col-1{
+  width: calc(100%/12);
+}
+.col-2{
+  width: calc(100%/6);
+} */
+/* 3 欄 */
+.col-3{
+  width: calc(100%/4);
+}
+/* 4 欄  */
+.col-4{
+  width: calc(100%/3);
+}
+/* .col-5{
+  width: calc(100%/12*5);
+} */
+/* 6 欄  */
+.col-6{
+  width: calc(100%/2);
+}
+/* .col-7{
+  width: calc(100%/12*7);
+}
+.col-8{
+  width: calc(100%/3*2);
+}
+.col-9{
+  width: calc(100%/12*9);
+}
+.col-10{
+  width: calc(100%/12*10);
+}
+.col-11{
+  width: calc(100%/12*11);
+} */
+.col-12{
+  width: 100%;
+}
+
+@media (max-width:992px) {
+  .col-md-10{
+      width: calc(100%/12*10);
+  }
+  .col-md-6{
+      width: calc(100%/2);
+  }
+  .col-md-12{
+      width: 100%;
+  }
+}
+@media (max-width:576px) {
+  .col-sm-12{
+      width: 100%;
+  }
+}
+
+.ma{
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+}
+.row_jcsb{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+.item_center{
+  display: flex;
+  align-items: center;
+}
+.item_end{
+  align-items: end;
+}
+.row_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+}
+.flex_start{
+  display: flex;
+  justify-content: start;
+}
+.row_start{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.row_end{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.list_start{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.list_end{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1, h2, h3, h4, h5, h6,p, a, span, div{
+  line-height: 1.5;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+h1, h2, h3, h4, .fz48{
+  color: #AA0601;
+}
+.roboto{
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 64px;
+  font-weight: 700;
+  @media (max-width:576px) {
+      font-size: 24px;
+  }
+}
+h2{
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  @media (max-width:576px) {
+      font-size: 24px;
+  }
+}
+h3{
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  @media (max-width:576px) {
+      font-size: 16px;
+  }
+}
+h4{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+h5{
+  font-size: 20px;
+}
+p{
+  font-size: 16px;
+  font-weight: 400;
+}
+.fz48{
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.text_center{
+  text-align: center;
+}
+.vertical_middle{
+  vertical-align: middle;
+}
+.text_white{
+  color: #fff;
+}
+.bg_lightred{
+  background-color: #fbf2f2;
+}
+.bg_red{
+  background-color: #AA0601;
+  /* height: 80px; */
+}
+/* ///////////nav////////////// */
+.logo{
+  width: 80px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+.nav-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width:576px) {
+      flex-direction: column;
+      /* 移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;        
+  }
+}
+.navbar-nav{
+  display: flex;
+  justify-content: space-between;
+      align-items: center;
+
+  @media (max-width:992px) {
+      flex-wrap: wrap;
+  }
+}
+.navbar-item{
+  height: 100%;
+  @media (max-width:576px) {
+      width: 50%;
+      margin-right: 0px;
+      /* 不知用意 */
+      border: 1px solid #ffffff;
+  }
+}
+.navbar-link{
+  font-size: 20px;
+  height: 100%;
+  display: block;
+  padding: 21px 32px;
+  /* 不知用意 */
+
+  @media (max-width:576px) {
+      font-size: 16px;
+      text-align: center;
+      padding: 12px 0;
+  }
+}
+.navbar-link:hover {
+  opacity: 0.7;
+}
+.navbar-item:last-child .navbar-link {
+  padding-right: 0;
+}
+.ptb-21{
+  padding: 21px 0;
+}
+.pl-64{
+  padding-left: 64px;
+}
+.ptb-16{
+  padding: 16px 0;
+}
+/* ///////////////header///////////////////////////// */
+.bg_pic_light{
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+  background-size: cover;
+  min-height: 787px;
+  @media (max-width:576px) {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+      min-height: 396px;
+  }
+}
+.ptb-296{
+  padding-top: 296px;
+  padding-bottom: 296px;
+  @media (max-width:576px) {
+      padding-top: 144px;
+      padding-bottom: 144px;
+  }
+}
+
+.text_1{
+  font-size: 36px;
+}
+.button_1{
+  background-color: #AA0601;
+  padding: 6px 12px;
+  font-size: 20px;
+}
+.pb-4{
+  padding-bottom: 4px;
+}
+/* //////////////section1//////////////////// */
+.pb-80{
+  padding-bottom: 80px;
+  @media (max-width:992px) {
+      padding-bottom: 24px;
+  }
+}
+.pt-80{
+  padding-top: 80px;
+  @media (max-width:576px) {
+      padding-top: 40px;
+  }
+}
+.pb-24{
+  padding-bottom: 24px;
+}
+.mb-24{
+  margin-bottom: 24px;
+}
+.w-25{
+  width:calc((100% - 72px)/4);
+}
+.icon_1{
+  width: 100px;
+}
+.pb-16{
+  padding-bottom: 16px;
+}
+.pb-8{
+  padding-bottom: 8px;
+}
+
+/* ////////////////section2///////////////////////// */
+.section_jcsb{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width:992px) {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.w-33{
+  width: calc((100% - 48px)/3);
+}
+.pb-48{
+  padding-bottom: 48px;
+  @media (max-width:576px) {
+      padding-bottom: 24px;
+  }
+}
+.pb-56{
+padding-bottom: 56px;  
+@media (max-width:576px) {
+  padding-bottom: 16px;
+}
+}
+.mlr-6{
+  @media (max-width:992px) {
+      margin-left: calc(100%/12*3);
+      margin-right: calc(100%/12*3);
+  }
+  @media (max-width:576px) {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+/* ////////////////section3///////////////////////// */
+.bg_pic_red{
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+  /* opacity: 1; */
+  background-size: cover;
+  @media (max-width:992px) {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true);
+  }
+  @media (max-width:576px) {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+  }
+}
+.bg_white{
+  background-color: #fff;
+  padding: 8px auto;
+}
+/* ////////////////section4///////////////////////// */
+.card{
+  background: #ffffff;
+  border: #dee2ed 1px solid;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px #00000029;
+}
+.card_text{
+  padding: 16px;
+  /* max-height: 240px; */
+}
+.mb-auto{
+  margin-bottom: auto;
+}
+.fw500{
+  font-weight: 500;
+}
+.pb-72{
+  padding-bottom: 72px;
+}
+.text_gray{
+  color: #707070;
+}
+/* ////////////////section5///////////////////////// */
+
+.block{
+  display: block;
+}
+.mb-8{
+  margin-bottom: 8px;
+}
+.mb-16{
+  margin-bottom: 16px;
+}
+.w100{
+  width: 100%;
+  height: 36px;
+  /* vertical-align: middle; */
+}
+.input_box{
+  border: 1px solid var(--unnamed-color-000000);
+  border: 1px solid #000000;
+  opacity: 1;
+}
+.button_send{
+  background-color: #AA0601;
+  padding: 16px 0;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 64px;
+  text-align: center;
+  @media (max-width:992px) {
+      margin-top: 48px;
+  }
+  @media (max-width:576px) {
+      margin-top: 24px;
+  }
+}
+/* //////////////////footer///////////////  */
+.footer_wrap{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+  flex-wrap: wrap;
+  @media (max-width:576px) {
+      align-items: top;
+      flex-direction: row-reverse;
+      padding-top: 24px;
+  }
+}
+.footer_jcsb{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width:576px) {
+      width: 25%;
+  }
+}
+
+.footer_nav{
+  @media (max-width:576px) {
+      display: none;
+  }
+}
+.icon_social{
+  width: 48px;
+  margin-left: 32px;
+  @media (max-width:992px) {
+      width: 40px;
+      margin-left: 16px;
+  }
+  @media (max-width:576px) {
+      width: 24px;
+      margin-left: 8px;
+  }
+}
+.footer_wrap2{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width:576px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: start;
+  }
+}
+.terms{
+  display: flex;
+  flex-direction: row;
+  @media (max-width:576px) {
+      flex-direction: column;
+  }
+}
+.term{
+  margin-left: 48px;
+  @media (max-width:576px) {
+      margin: 0;
+      width: 100%;
+  }
+}
+
+.pr-48{
+  padding-right: 48px;
+}
+
+.pt-48{
+  padding-top: 48px;
+}
+.icon_phone{
+  padding: 6px;
+}
+.icon_mail{
+  padding: 8px 4px;
+}
+.icon_call{
+  font-size: 48px;
+  @media (max-width:576px) {
+      font-size: 24px;
+  }
+}
+.mr-16{
+  margin-right: 16px;
+}
+
+.ml-48{
+  margin-left: 48px;
+}
+.hr{
+  margin: 32px 0;
+  display: block;
+  @media (max-width:576px) {
+      margin: 24px 0 16px 0;
+  }
+}
+.pbb-24{
+  padding-bottom: 24px;
+}
+.pbb-8{
+  padding-bottom: 8px;
+  @media (max-width:992px) {
+      padding-bottom: 16px;
+  }
+  @media (max-width:576px) {
+      padding-bottom: 8px;
+  }
+}
+.mt-24{
+  padding-top: 24px;
+}
+.pbb-80{
+  padding-bottom: 80px;
+  @media (max-width:576px) {
+      padding-bottom: 40px;
+  }
 }

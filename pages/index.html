@@ -1,19 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Week4</title>
+    <link rel="stylesheet" href="reset.css">
+    <!-- text  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+    <header class="bg_pic_light ptb-296">
+      <div class="container list_end">
+          <h3 class="text_l">Promise-Desert 2020 早春系列</h3>
+          <h1 class="pb-4">看得清，才能看得遠</h1>
+          <a class="button_1 text_white" href="#">立即購買</a>
+      </div>
+    </header>
+    <!-- section1 - 4方塊 -->
+    <section class="bg_lightred">
+        <div class="container">
+            <h2 class="pt-80 pb-24">用專業的心，做專業的事</h2>
+            <ul class="row_jcsb wrap row">
+                <li class="list col-3 col-md-6 col-sm-12 plr-12 pb-80">
+                    <img class="icon_1 ma pb-16"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section2-1.png?raw=true"
+                        alt="icon_money">
+                    <h4 class="pb-8">單一價格</h4>
+                    <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+                </li>
+                <li class="list col-3 col-md-6 col-sm-12 plr-12 pb-80">
+                    <img class="icon_1 ma pb-16"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section2-2.png?raw=true"
+                        alt="icon_time">
+                    <h4 class="pb-8">20 分鐘即可取件</h4>
+                    <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
+                </li>
+                <li class="list col-3 col-md-6 col-sm-12 plr-12 pb-80">
+                    <img class="icon_1 ma pb-16"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section2-3.png?raw=true"
+                        alt="icon_heart">
+                    <h4 class="pb-8">安心售後服務</h4>
+                    <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
+                </li>
+                <li class="list col-3 col-md-6 col-sm-12 plr-12 pb-80">
+                    <img class="icon_1 ma pb-16"
+                        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-sectioin2-4.png?raw=true"
+                        alt="icon_glasses">
+                    <h4 class="pb-8">關於鏡片</h4>
+                    <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section2 - 3個人 -->
+    <section>
+        <div class="container">
+            <h2 class="pt-80 pb-48">經典系列鏡框</h2>
+            <ul class="row_jcsb row wrap pb-56">
+                <li class="col-4 col-md-6 mlr-6 col-sm-12 plr-12 pb-24">
+                    <img class="pb-8" src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section3-1.png?raw=true" alt="glasses_1">
+                    <p class="fz48 roboto">OPTICAL</p>
+                </li>
+                <li class="col-4 col-md-6 mlr-6 col-sm-12 plr-12 pb-24">
+                    <img class="pb-8" src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section3-2.png?raw=true" alt="glasses_2">
+                    <p class="fz48 roboto">SUNGLASSES</p>
+                </li>
+                <li class="col-4 col-md-6 mlr-6 col-sm-12 plr-12 pb-24">
+                    <img class="pb-8" src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section3-3.png?raw=true" alt="glasses_3">
+                    <p class="fz48 roboto">FUNCTIONAL</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section3 底圖2圖 -->
+    <section class="bg_pic_red">
+        <div class="container">
+            <h2 class="text_white pt-80 pb-48">聯名設計鏡框</h2>
+            <ul class="row wrap pb-56 plr-12">
+                <li class="col-6 col-md-12 col-sm-12 pb-24">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1.png?raw=true"
+                        alt="glasses_4">
+                    <p class="fz48 roboto bg_white">DOUBLE A+</p>
+                </li>
+                <li class="col-6 col-md-12 col-sm-12 pb-24">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2.png?raw=true"
+                        alt="glasses_5">
+                    <p class="fz48 roboto bg_white">YOUTH</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section4 顧客推薦 -->
+    <section>
+        <div class="container">
+            <h2 class="pt-80 pb-48">顧客推薦</h2>
+            <ul class="row_jcsb wrap pb-56 row">
+                <li class="col-3 col-md-6 col-sm-12 mb-24 plr-12">
+                    <div class="card">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section5-1.png?raw=true" alt="people_1">
+                        <div class="card_text">
+                            <p class="fw500 pb-8">Jessy</p>
+                            <p class="pb-72">眼鏡品質優良，下次還會想來這邊購買！</p>
+                            <time class="text_gray">2021/06/20</time>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-3 col-md-6 col-sm-12 mb-24 plr-12">
+                    <div class="card">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section5-2.png?raw=true" alt="people_2">
+                        <div class="card_text">
+                            <p class="fw500 pb-8">凱倫</p>
+                            <p class="pb-72">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
+                            <time class="text_gray">2021/04/18</time>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-3 col-md-6 col-sm-12 mb-24 plr-12">
+                    <div class="card">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section5-3.png?raw=true" alt="people_3">
+                        <div class="card_text">
+                            <p class="fw500 pb-8">悠悠</p>
+                            <p class="pb-72">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+                            <time class="text_gray">2020/12/25</time>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-3 col-md-6 col-sm-12 mb-24 plr-12">
+                    <div class="card">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section5-4.png?raw=true" alt="people_4">
+                        <div class="card_text">
+                            <p class="fw500 pb-8">Kyuan</p>
+                            <p class="pb-72">服務很好，品質沒有任何問題，非常喜歡。</p>
+                            <time class="text_gray">2020/10/31</time>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- section5  -->
+    <section class="bg_lightred">
+        <div class="container">
+            <div class="col-6 col-md-10 col-sm12 ma pbb-80">
+                <h2 class="pt-80 pb-48">聯絡我們</h2>
+                <h5 class="pb-24">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</h5>
+                <form action="/action_page.html">
+                    <label class="block mb-8" for="name">姓名</label>
+                    <input class="block mb-16 w100 bg_lightred input_box" id="name" type="text" name="Username" placeholder="陳小明">
+                    <label class="block mb-8" for="tel">聯絡電話</label>
+                    <input class="block mb-16 w100 bg_lightred input_box" id="tel" type="text" name="Phone" placeholder="0912-345-678">
+                    <label class="block mb-8" for="email">電子郵件</label>
+                    <input class="block mb-16 w100 bg_lightred input_box" id="email" type="text" name="Mail" placeholder="example@email.com">
+                    <label class="block mb-8" for="text">意見反應</label>
+                    <input class="block mb-16 w100 bg_lightred input_box" id="text" type="text" name="opinion" placeholder="請輸入您的意見">
+                    
+                    <input id="form-checkbox" type="checkbox" name="agree">
+                    <label for="form-checkbox">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label><br>
+                    <!-- 送出按鈕 -->
+                    <div class="row_center"><a href="#" class="button_send text_white col-4 col-md-6 col-sm-12">確認送出</a></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <%- include('./layout/footer'); -%>
-
+    <!-- 不能改 Vite 核心關鍵 注入JS -->
     <script type="module" src="../main.js"></script>
   </body>
 </html>

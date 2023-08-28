@@ -1,8 +1,13 @@
-@import './layout/variable.scss';
-@import './layout/reset.scss';
+// base 
+@import './base/variable.scss'; //變數
+@import './base/reset.scss'; // CSS Reset
+@import './base/base.scss'; // 全站樣式 img{}, body{}
+@import './base/mixin.scss'; // mixin
 
+// layout 區塊
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
+// pages 頁面
 @import './pages/index.scss';
 @import './pages/shop.scss';
